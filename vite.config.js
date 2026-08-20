@@ -1,7 +1,8 @@
+/* global process */
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/goldman-raf-portfolio/",
+  base: process.env.GITHUB_ACTIONS ? "/goldman-raf-portfolio/" : "/",
 });
