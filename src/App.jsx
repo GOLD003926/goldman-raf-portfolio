@@ -1,16 +1,22 @@
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import Footer from "./components/Footer"; // ⚠️ manquait — sans lui, le lien "Contact" ne trouve pas #contact
+
 function App() {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        margin: 0,
-        fontFamily: "sans-serif",
-      }}
-    >
-      <h1>Hi, I'm Goldman</h1>
+    <div className="min-h-screen">
+      <Navbar />
+      <main>
+        <Hero />
+        {/*
+          Si vous avez d'autres sections (Projets, Services, Expérience...),
+          importez-les et ajoutez-les ici, dans l'ordre d'affichage. Ex :
+          <Projects />
+          <Services />
+          <Experience />
+        */}
+      </main>
+      <Footer />
     </div>
   );
 }
